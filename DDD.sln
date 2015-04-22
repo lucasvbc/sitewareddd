@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22609.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Application", "DDD.Aplication\DDD.Application.csproj", "{96089839-FE08-4383-972B-B963011153AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Data", "DDD.Data\DDD.Data.csproj", "{96E08EA6-9C94-4CEE-86F2-614F372CE870}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Domain", "DDD.Domain\DDD.Domain.csproj", "{B6856F79-3372-470E-9744-49D852FE3E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.IoC", "DDD.IoF\DDD.IoC.csproj", "{116866CF-E0C8-401F-98F1-186C36170D61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDD.Mvc", "DDD.Mvc\DDD.Mvc.csproj", "{3C935D1C-D969-49FB-8B6C-9D34EAB25B3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96089839-FE08-4383-972B-B963011153AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96089839-FE08-4383-972B-B963011153AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96089839-FE08-4383-972B-B963011153AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96089839-FE08-4383-972B-B963011153AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E08EA6-9C94-4CEE-86F2-614F372CE870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E08EA6-9C94-4CEE-86F2-614F372CE870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E08EA6-9C94-4CEE-86F2-614F372CE870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E08EA6-9C94-4CEE-86F2-614F372CE870}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6856F79-3372-470E-9744-49D852FE3E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6856F79-3372-470E-9744-49D852FE3E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6856F79-3372-470E-9744-49D852FE3E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6856F79-3372-470E-9744-49D852FE3E72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{116866CF-E0C8-401F-98F1-186C36170D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{116866CF-E0C8-401F-98F1-186C36170D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{116866CF-E0C8-401F-98F1-186C36170D61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{116866CF-E0C8-401F-98F1-186C36170D61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C935D1C-D969-49FB-8B6C-9D34EAB25B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C935D1C-D969-49FB-8B6C-9D34EAB25B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C935D1C-D969-49FB-8B6C-9D34EAB25B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C935D1C-D969-49FB-8B6C-9D34EAB25B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://lvbcosta.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DDD.Aplication\\DDD.Application.csproj
+		SccProjectName1 = DDD.Aplication
+		SccLocalPath1 = DDD.Aplication
+		SccProjectUniqueName2 = DDD.Data\\DDD.Data.csproj
+		SccProjectName2 = DDD.Data
+		SccLocalPath2 = DDD.Data
+		SccProjectUniqueName3 = DDD.Domain\\DDD.Domain.csproj
+		SccProjectName3 = DDD.Domain
+		SccLocalPath3 = DDD.Domain
+		SccProjectUniqueName4 = DDD.IoF\\DDD.IoC.csproj
+		SccProjectName4 = DDD.IoF
+		SccLocalPath4 = DDD.IoF
+		SccProjectUniqueName5 = DDD.Mvc\\DDD.Mvc.csproj
+		SccProjectName5 = DDD.Mvc
+		SccLocalPath5 = DDD.Mvc
+	EndGlobalSection
+EndGlobal
