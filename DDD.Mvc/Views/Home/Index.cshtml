@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h1>Carrinho de compras</h1>
+
+    <form class="form-horizontal" method="POST">
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            <div class="col-sm-12">
+                Escolha um produto:
+                @Html.DropDownList("productsList", (SelectList)ViewData["products"], "Selecione um produto...")
+                <button type="submit" class="btn btn-primary ">Adicionar no carrinho</button>
+            </div>
+        </div>
+    </form>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Promoções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewData["shoppingCart"] != null)
+            {
+                var shoppingCart = ((ShoppingCartViewModel)ViewData["shoppingCart"]);
+
+                if (shoppingCart != null)
+                {
+                    var items = shoppingCart.Items;
+                    if (items != null)
+                    {
+                        foreach (var item in items)
+                        {
+                            var offersList = (SelectList)ViewData["offer"];
+
+                            <tr id="@item.ShoppingCartItemId">
+                                <td>@item.ProductName</td>
+                                <td><input value="@item.Amount" onchange="changeAmountOfProduct('@item.ShoppingCartItemId',$(this))" /></td>
+                                <td>@item.Price</td>
+                                <td>
+                                    @Html.DropDownList("offerList", offersList
+                                   .Select(o => new SelectListItem
+                                   {
+                                       Text = o.Text,
+                                       Value = o.Value,
+                                       Selected = o.Value == item.OfferId.ToString()
+                                   }), "Selecione uma promoção", new { onchange = "changeOffer($(this))" })
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            }
+        </tbody>
+
+    </table>
+</div>
+@section scripts{
+    <script>
+        function changeOffer(select) {
+            var offerId = select.val();
+            var shoppingCartItemId = select.parent().parent().attr("id");
+
+            $.post("/home/ChangeOffer", { shoppingCartItemId: shoppingCartItemId, offerId: offerId })
+                .done(function (response) { location.reload(); })
+                .error(function (error) { alert("Error"); });
+        }
+        function changeAmountOfProduct(shoppingCartItemId, input) {
+            $.post("/home/ChangeAmountOfProduct", { Amount: input.val(), shoppingCartItemId: shoppingCartItemId })
+                .done(function (response) { location.reload(); })
+                .error(function (error) { alert("Error"); });
+
+        }
+    </script>
+}
